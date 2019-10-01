@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppIcon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeQ-vB-Qsf">
+                                <rect key="frame" x="-512" y="-75" width="2048" height="1536"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1536" id="lWm-U5-3Je"/>
+                                    <constraint firstAttribute="width" constant="2048" id="syn-NO-JRo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZ1-bt-PjP">
+                                <rect key="frame" x="256" y="437" width="512" height="512"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kse-So-gJW">
+                                        <rect key="frame" x="35" y="35" width="442" height="442"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poletime" translatesAutoresizingMaskIntoConstraints="NO" id="Ttk-13-n8a">
+                                                <rect key="frame" x="35" y="35" width="372" height="372"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.93333333333333335" green="0.27843137254901962" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Ttk-13-n8a" secondAttribute="height" multiplier="1:1" id="UKA-m2-zw8"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Ttk-13-n8a" firstAttribute="width" secondItem="kse-So-gJW" secondAttribute="width" constant="-70" id="87S-zv-Cl9"/>
+                                            <constraint firstAttribute="width" secondItem="kse-So-gJW" secondAttribute="height" multiplier="1:1" id="CXN-UR-vuy"/>
+                                            <constraint firstItem="Ttk-13-n8a" firstAttribute="centerX" secondItem="kse-So-gJW" secondAttribute="centerX" id="kWH-F0-IsT"/>
+                                            <constraint firstItem="Ttk-13-n8a" firstAttribute="centerY" secondItem="kse-So-gJW" secondAttribute="centerY" id="rew-xu-Zmz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="512" id="F4a-3n-gB6"/>
+                                    <constraint firstItem="Ttk-13-n8a" firstAttribute="top" secondItem="HZ1-bt-PjP" secondAttribute="top" constant="70" id="PzQ-0c-ZBd"/>
+                                    <constraint firstItem="kse-So-gJW" firstAttribute="centerY" secondItem="HZ1-bt-PjP" secondAttribute="centerY" id="cgu-gx-rtk"/>
+                                    <constraint firstItem="kse-So-gJW" firstAttribute="centerX" secondItem="HZ1-bt-PjP" secondAttribute="centerX" id="mHm-Xw-HED"/>
+                                    <constraint firstAttribute="width" constant="512" id="yg4-SR-icH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HZ1-bt-PjP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Dvl-I7-XyN"/>
+                            <constraint firstItem="IeQ-vB-Qsf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="N6Y-1O-01d"/>
+                            <constraint firstItem="HZ1-bt-PjP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TGm-0r-6bP"/>
+                            <constraint firstItem="IeQ-vB-Qsf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zXt-h3-HxA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="IeQ-vB-Qsf" id="xmv-6N-PaA"/>
+                        <outlet property="contentView" destination="HZ1-bt-PjP" id="n5r-rc-neF"/>
+                        <outlet property="imageContentView" destination="kse-So-gJW" id="nhr-Jg-Ay2"/>
+                        <outlet property="imageView" destination="Ttk-13-n8a" id="YLm-h6-UfU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="poletime" width="48" height="48"/>
+    </resources>
+</document>
