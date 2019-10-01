@@ -1,6 +1,7 @@
 # AppIcon
 Small helper project for generate AppIcon and gradient background image, Sketch or Photoshop is better for this, but I am iOS developer 😎 and this is for me more faster and customizable
-![Result](https://github.com/jantimar/AppIcon/blob/master/ReadmeAssets/screenshot.png?raw=true)
+![App icon with image](https://github.com/jantimar/AppIcon/blob/master/ReadmeAssets/screenshot.png?raw=true)
+![App icon with text](https://github.com/jantimar/AppIcon/blob/master/ReadmeAssets/screenshot2.png?raw=true)
 
 ## Getting Started
 Set your app icon in `Assets.xcassets` , modify your colors and ... just run project locally. Your Icons directroy will be print in console in few seconds. f.e.
@@ -10,6 +11,18 @@ bacground: file:///Users/.../Library/Developer/CoreSimulator/Devices/315D0E22-B2
 ```
 
 ### App icon
+When you want your app icon with some image
+```
+let appIconType: AppIconType = .image(image: #imageLiteral(resourceName: "testAppIcon"))
+```
+![App icon](https://github.com/jantimar/AppIcon/blob/master/ReadmeAssets/appIcon.png?raw=true)
+
+Or prefer app icon with some text
+```
+let appIconType: AppIconType = .text(string: "Ai")
+```
+![App icon](https://github.com/jantimar/AppIcon/blob/master/ReadmeAssets/appIcon2.png?raw=true)
+
 Icon color
 ```
 appIconColor: UIColor = .white
@@ -18,7 +31,6 @@ Icon background color, for set solid color just use array with one color
 ```
 let appIconGradientColors: [UIColor] = [.red, UIColor.red.withAlphaComponent(0.5)]
 ```
-![App icon](https://github.com/jantimar/AppIcon/blob/master/ReadmeAssets/appIcon.png?raw=true)
 
 ### Gradient backround
 It can be usefull for Launchscreen

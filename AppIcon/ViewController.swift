@@ -8,18 +8,29 @@
 
 import UIKit
 
+enum AppIconType {
+	case image(image: UIImage)
+	case text(string: String)
+}
+
 final class ViewController: UIViewController {
 
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var imageContentView: UIView!
     @IBOutlet weak var backgroundView: UIView!
-
+	@IBOutlet weak var iconTextLabel: UILabel!
+	
 	// MARK: Setup icon and background
 	let appIconColor: UIColor = .white
 	let appIconGradientColors: [UIColor] = [.red, UIColor.red.withAlphaComponent(0.5)]
+	let appIconFont: UIFont = .systemFont(ofSize: 250)
 
-	let backgroundIconGradientColors: [UIColor] = [.blue, .green]
+	// For text app icon
+//	let appIconType: AppIconType = .text(string: "Ai")
+	// For image app icon
+	let appIconType: AppIconType = .image(image: #imageLiteral(resourceName: "testAppIcon"))
+
+	let backgroundIconGradientColors: [UIColor] = [.blue, UIColor.blue.withAlphaComponent(0.5)]
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -28,7 +39,18 @@ final class ViewController: UIViewController {
     }
 	
 	private func setupAppIcon() {
-        imageView.tintColor = appIconColor
+		iconTextLabel.text = nil
+		imageView.image = nil
+		
+		switch appIconType {
+		case .image(let image):
+			imageView.tintColor = appIconColor
+			imageView.image = image
+		case .text(let string):
+			iconTextLabel.textColor = appIconColor
+			iconTextLabel.font = appIconFont
+			iconTextLabel.text = string
+		}
 
 		if appIconGradientColors.count == 1, let appIconColor = appIconGradientColors.first {
 			contentView.backgroundColor = appIconColor
